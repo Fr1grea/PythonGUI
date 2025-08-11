@@ -1,10 +1,6 @@
 import tkinter as tk
 from tkinter import PhotoImage, font
 
-def update_label():
-    user_input = entry.get()
-    label.config(text=user_input)
-
 #comment for github test
 
 root = tk.Tk()
@@ -24,11 +20,27 @@ root.title("Basic GUI Example")
 label = tk.Label(root, text="Centered Title", font = ("Times New Roman", 16, "bold"))
 label.pack(pady=10)
 
-entry = tk.Entry(root)
-entry.pack(pady=10)
+#me when i customized buttons
+button1 = tk.Button(root, 
+                    text="Button 1",
+                    font = ("Times New Roman", 13),
+                    bg = "white",
+                    fg = "darkblue",
+                    padx = 25,
+                    pady = 5,
+                    relief = "raised"
+                    )
+button1.pack(pady=10, padx = 10)
 
-button = tk.Button(root, text="Update Label", command=update_label)
-button.pack(pady=10)
+button2 = tk.Button(root, 
+                    text="Button 2",
+                    font = ("Times New Roman", 13),
+                    bg = "white",
+                    fg = "darkblue",
+                    padx = 25,
+                    pady = 5,
+                    relief = "raised")
+button2.pack(pady=10)
 
 #run the application
 root.mainloop()
