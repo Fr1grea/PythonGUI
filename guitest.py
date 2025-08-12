@@ -18,7 +18,7 @@ backgroundLavel.place(relwidth=1, relheight=1) #stretch to fill
 
 root.title("Automation GUI")
 
-label = tk.Label(root, text="Centered Title", font = ("Times New Roman", 16, "bold"))
+label = tk.Label(root, text="Automation Scripts", font = ("Times New Roman", 16, "bold"))
 label.pack(pady=15)
 
 def runAutomationScript():
@@ -29,7 +29,7 @@ def runDestroyScript():
 
 #me when i customized buttons
 button1 = tk.Button(root, 
-                    text="Button 1",
+                    text="Range Creation",
                     font = ("Times New Roman", 13),
                     bg = "white",
                     fg = "darkblue",
@@ -42,7 +42,7 @@ button1.place(x=75, y = 80)
 
 
 button2 = tk.Button(root, 
-                    text="Button 2",
+                    text="Range Destruction",
                     font = ("Times New Roman", 13),
                     bg = "white",
                     fg = "darkblue",
