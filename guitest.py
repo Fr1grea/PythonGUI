@@ -21,6 +21,12 @@ root.title("Basic GUI Example")
 label = tk.Label(root, text="Centered Title", font = ("Times New Roman", 16, "bold"))
 label.pack(pady=15)
 
+def runAutomationScript():
+    subprocess.run(['./root/harvester test/Automation.sh'])
+
+def runDestroyScript():
+    subprocess.run(['./root/harvester test/Destroy.sh'])
+
 #me when i customized buttons
 button1 = tk.Button(root, 
                     text="Button 1",
@@ -29,15 +35,11 @@ button1 = tk.Button(root,
                     fg = "darkblue",
                     padx = 25,
                     pady = 5,
-                    relief = "raised"
-                    )
+                    relief = "raised",
+                    command = runAutomationScript)
 button1.pack(pady=10)
 button1.place(x=75, y = 80)
-def runAutomationScript():
-    subprocess.run(['./root/harvester test/Automation.sh'])
 
-def runDestroyScript():
-    subprocess.run(['./root/harvester test/Destroy.sh'])
 
 button2 = tk.Button(root, 
                     text="Button 2",
@@ -46,7 +48,8 @@ button2 = tk.Button(root,
                     fg = "darkblue",
                     padx = 25,
                     pady = 5,
-                    relief = "raised")
+                    relief = "raised",
+                    command = runDestroyScript)
 button2.pack(pady=10)
 button2.place(x=300, y = 80)
 
