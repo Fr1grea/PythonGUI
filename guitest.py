@@ -16,16 +16,16 @@ backgroundImage = PhotoImage(file='BackgroundImagePy.png')
 backgroundLavel = tk.Label(root, image=backgroundImage)
 backgroundLavel.place(relwidth=1, relheight=1) #stretch to fill
 
-root.title("Basic GUI Example")
+root.title("Automation GUI")
 
 label = tk.Label(root, text="Centered Title", font = ("Times New Roman", 16, "bold"))
 label.pack(pady=15)
 
 def runAutomationScript():
-    subprocess.run(['./root/harvester test/Automation.sh'])
+    subprocess.run(['./automation.sh'])
 
 def runDestroyScript():
-    subprocess.run(['./root/harvester test/Destroy.sh'])
+    subprocess.run(['./destroy.sh'])
 
 #me when i customized buttons
 button1 = tk.Button(root, 
