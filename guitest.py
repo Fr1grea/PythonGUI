@@ -4,6 +4,7 @@ from tkinter import PhotoImage, font
 
 root = tk.Tk()
 root.geometry("500x145") #set window size
+root.resizable(False, False)
 
 #background
 backgroundImage = PhotoImage(file='BackgroundImagePy.png')
@@ -17,17 +18,15 @@ label.pack(pady=15)
 
 #scripts
 def runAutomationScript():
-    subprocess.run(['./automation.sh'])
+   subprocess.run(['./automation.sh'])
 
 def runDestroyScript():
-    subprocess.run(['./destroy.sh'])
+   subprocess.run(['./destroy.sh'])
 
 #buttons
 button1 = tk.Button(root, 
-                    text="Automation Script",
-                    font = ("Times New Roman", 12),
                     text="Range Creation",
-                    font = ("Times New Roman", 13),
+                    font = ("Times New Roman", 12),
                     bg = "white",
                     fg = "darkblue",
                     width = 10,
@@ -35,16 +34,15 @@ button1 = tk.Button(root,
                     padx = 20,
                     pady = 1,
                     relief = "raised",
-                    command = runAutomationScript)
+                    command = runAutomationScript
+                    )
 button1.pack(pady=10)
 button1.place(x=65, y = 80)
 
 
 button2 = tk.Button(root, 
-                    text="Destroy Script",
-                    font = ("Times New Roman", 12),
                     text="Range Destruction",
-                    font = ("Times New Roman", 13),
+                    font = ("Times New Roman", 12),
                     bg = "white",
                     fg = "darkblue",
                     width = 10,
@@ -52,7 +50,8 @@ button2 = tk.Button(root,
                     padx = 20,
                     pady = 1,
                     relief = "raised",
-                    command = runDestroyScript)
+                    command = runDestroyScript
+                    )
 button2.pack(pady=10)
 button2.place(x=300, y = 80)
 
