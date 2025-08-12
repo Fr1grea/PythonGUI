@@ -1,4 +1,5 @@
 import tkinter as tk
+import subprocess
 from tkinter import PhotoImage, font
 
 #comment for github test
@@ -32,7 +33,12 @@ button1 = tk.Button(root,
                     )
 button1.pack(pady=10)
 button1.place(x=75, y = 80)
+def runAutomationScript():
+    subprocess.run(['./~/harvester test/Automation.sh'])
 
+def runDestroyScript():
+    subprocess.run(['./~/harvester test/Destroy.sh'])
+    
 button2 = tk.Button(root, 
                     text="Button 2",
                     font = ("Times New Roman", 13),
