@@ -10,22 +10,24 @@ backgroundImage = PhotoImage(file='BackgroundImagePy.png')
 backgroundLavel = tk.Label(root, image=backgroundImage)
 backgroundLavel.place(relwidth=1, relheight=1) #stretch to fill
 
-root.title("Basic GUI Example")
+root.title("Automation GUI")
 
 label = tk.Label(root, text="Automation Scripts", font = ("Times New Roman", 16, "bold"))
 label.pack(pady=15)
 
 #scripts
 def runAutomationScript():
-   subprocess.run(['./root/harvester test/Automation.sh'])
+    subprocess.run(['./automation.sh'])
 
 def runDestroyScript():
-    subprocess.run(['./root/harvester test/Destroy.sh'])
+    subprocess.run(['./destroy.sh'])
 
 #buttons
 button1 = tk.Button(root, 
                     text="Automation Script",
                     font = ("Times New Roman", 12),
+                    text="Range Creation",
+                    font = ("Times New Roman", 13),
                     bg = "white",
                     fg = "darkblue",
                     width = 10,
@@ -41,6 +43,8 @@ button1.place(x=65, y = 80)
 button2 = tk.Button(root, 
                     text="Destroy Script",
                     font = ("Times New Roman", 12),
+                    text="Range Destruction",
+                    font = ("Times New Roman", 13),
                     bg = "white",
                     fg = "darkblue",
                     width = 10,
