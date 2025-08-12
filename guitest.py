@@ -2,14 +2,8 @@ import tkinter as tk
 import subprocess
 from tkinter import PhotoImage, font
 
-#comment for github test
-
 root = tk.Tk()
-root.geometry("500x200") #set window size
-
-#frame
-#frame = tk.Frame(root, width = 500, height = 200, bg = "lightblue")
-#frame.pack()
+root.geometry("500x145") #set window size
 
 #background
 backgroundImage = PhotoImage(file='BackgroundImagePy.png')
@@ -18,36 +12,41 @@ backgroundLavel.place(relwidth=1, relheight=1) #stretch to fill
 
 root.title("Basic GUI Example")
 
-label = tk.Label(root, text="Centered Title", font = ("Times New Roman", 16, "bold"))
+label = tk.Label(root, text="Automation Scripts", font = ("Times New Roman", 16, "bold"))
 label.pack(pady=15)
 
+#scripts
 def runAutomationScript():
-    subprocess.run(['./root/harvester test/Automation.sh'])
+   subprocess.run(['./root/harvester test/Automation.sh'])
 
 def runDestroyScript():
     subprocess.run(['./root/harvester test/Destroy.sh'])
 
-#me when i customized buttons
+#buttons
 button1 = tk.Button(root, 
-                    text="Button 1",
-                    font = ("Times New Roman", 13),
+                    text="Automation Script",
+                    font = ("Times New Roman", 12),
                     bg = "white",
                     fg = "darkblue",
-                    padx = 25,
-                    pady = 5,
+                    width = 10,
+                    height = 1,
+                    padx = 20,
+                    pady = 1,
                     relief = "raised",
                     command = runAutomationScript)
 button1.pack(pady=10)
-button1.place(x=75, y = 80)
+button1.place(x=65, y = 80)
 
 
 button2 = tk.Button(root, 
-                    text="Button 2",
-                    font = ("Times New Roman", 13),
+                    text="Destroy Script",
+                    font = ("Times New Roman", 12),
                     bg = "white",
                     fg = "darkblue",
-                    padx = 25,
-                    pady = 5,
+                    width = 10,
+                    height = 1,
+                    padx = 20,
+                    pady = 1,
                     relief = "raised",
                     command = runDestroyScript)
 button2.pack(pady=10)
